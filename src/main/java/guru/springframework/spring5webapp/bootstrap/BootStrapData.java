@@ -9,6 +9,8 @@ import guru.springframework.spring5webapp.domain.Publisher;
 import guru.springframework.spring5webapp.repositories.AuthorRepository;
 import guru.springframework.spring5webapp.repositories.BookRepository;
 import guru.springframework.spring5webapp.repositories.PublisherRepository;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
 
 @Component
 public class BootStrapData implements CommandLineRunner {
@@ -44,10 +46,10 @@ public class BootStrapData implements CommandLineRunner {
 
         ddd.setPublisher(publisher);
         publisher.getBooks().add(ddd);
-        publisherRepository.save(publisher);
 
         authorRepository.save(eric);
         bookRepository.save(ddd);
+        publisherRepository.save(publisher);
 
         Author rod = new Author("Rod", "Johnson");
         Book noEJB = new Book("J2EE Developmetn without EJB", "3215648534");

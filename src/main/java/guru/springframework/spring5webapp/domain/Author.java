@@ -66,7 +66,7 @@ public class Author {
 	@Override
 	public String toString() {
 		return "Book{" + " id='" + getId() + "'" + ", firstName='" + getFirstName() + "'" + ", lastName='"
-				+ getLastName() + "'" + ", books='" + getBooks() + "'" + "}";
+				+ getLastName() + "'" + "}";
 	}
 
 	@Override

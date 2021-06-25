@@ -22,7 +22,6 @@ public class Book {
 	private String isbn;
 
 	@ManyToOne
-	@JoinColumn(name = "publisher_id")
 	private Publisher publisher;
 
 	@ManyToMany
@@ -88,7 +87,7 @@ public class Book {
 	@Override
 	public String toString() {
 		return "Author{" + " id='" + getId() + "'" + ", title='" + getTitle() + "'" + ", isbn='" + getIsbn() + "'"
-				+ ", authors='" + getAuthors() + "'" + "}";
+				+ "}";
 	}
 
 	@Override
